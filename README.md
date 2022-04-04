@@ -23,7 +23,7 @@ A simple app for uploading products to a shopify store
           shopify_shop_name: <Your store name on shopify without the domain. e.g 'latori-test' and not 'latori-test.myshopify.com'>
           ```
 8. Run the command `rails db:Setup` to setup the database.
-9. To start the scheduled background job, run `bundle exec sidekiq`.
+9. To start the scheduled background job, run `bundle exec sidekiq`. Note that this is a cron job that runs hourly once started.
 10. The background job will then run hourly.
 11. To visually see the scheduled jobs, visit the route `/sidekiq` on your browser.
 
