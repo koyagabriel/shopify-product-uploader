@@ -1,0 +1,4 @@
+product_upload:
+  cron: '0 0 * * * *'
+  class: ProductUploaderJob
+  description: "This job uploads products to shopify"
