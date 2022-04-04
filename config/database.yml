@@ -1,0 +1,37 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: <%= Figaro.env.database_name %>
+  host: <%= Figaro.env.database_host %>
+  user: <%= Figaro.env.database_user %>
+  password: <%= Figaro.env.database_password %>
+  port: 5432
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: <%= Figaro.env.database_name %>
+  host: <%= Figaro.env.database_host %>
+  user: <%= Figaro.env.database_user %>
+  password: <%= Figaro.env.database_password %>
+  port: 5432
+
+production:
+  <<: *default
+  database: <%= Figaro.env.database_name %>
+  host: <%= Figaro.env.database_host %>
+  user: <%= Figaro.env.database_user %>
+  password: <%= Figaro.env.database_password %>
+  port: 5432
