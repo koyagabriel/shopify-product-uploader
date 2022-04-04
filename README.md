@@ -26,3 +26,9 @@ A simple app for uploading products to a shopify store
 9. To start the scheduled background job, run `bundle exec sidekiq`.
 10. The background job will then run hourly.
 11. To visually see the scheduled jobs, visit the route `/sidekiq` on your browser.
+
+### Note: 
+If you need to run the product upload process just once outside of sidekiq, run the rake task command `rake shopify:upload_product`.
+
+### Developer
+Koya Adegboyega.
